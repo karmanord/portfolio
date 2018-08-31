@@ -1,0 +1,61 @@
+.top-container {
+    height: 100vh;
+    background-color: #ECC32E;   
+    position: relative;
+}
+
+.title-container {
+    text-align: center;
+    margin: auto;
+    height: 400px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.text {
+    // font-family: 'Syncopate', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    color: #FEFFFF;
+    margin: 30px;
+}
+
+.sub-text {
+    // font-family: 'Syncopate', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    margin-top: 40px;
+    color: #FEFFFF;
+}
+
+.next {
+    margin-top: 180px;
+    font-size: 30px;
+    
+}
+.next:hover {
+    color: #47EFD5;
+    cursor : pointer;
+}
+
+.fa {
+    font-size: 100px;
+}
+
+@media screen and ( max-width:479px )
+{
+    .text {
+        font-size: 20px;
+    }
+
+    .sub-text {
+        font-size: 5px;
+    }
+
+    .next {
+        font-size: 15px;
+    }
+}

@@ -1,18 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 import { AppComponent } from './app.component';
+import { TopComponent } from './pages/top/top.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [TopComponent]
 })
 export class AppModule { }
