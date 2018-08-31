@@ -1,9 +1,12 @@
+/*共通*/
 .top-container {
     height: 100vh;
     background-color: #ECC32E;   
     position: relative;
 }
+/*共通*/
 
+/*タイトル*/
 .title-container {
     text-align: center;
     margin: auto;
@@ -41,10 +44,17 @@
     cursor : pointer;
 }
 
-.fa {
-    font-size: 100px;
+.colorChange1 {
+    color: #B912B9;
 }
 
+.colorChange2 {
+    color: #000E9F;
+}
+
+.colorChange3 {
+    color: #000000;
+}
 @media screen and ( max-width:479px )
 {
     .text {
@@ -59,3 +69,115 @@
         font-size: 15px;
     }
 }
+/*タイトル*/
+
+/*プロフィール*/
+@media screen and ( min-width:480px )
+{
+    .image-container {
+        margin-top: 100px;
+        margin-left: 100px;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    img {
+        width:300px;
+    }
+
+    .name-text {
+        font-family: 'Kosugi Maru', sans-serif;
+    }
+
+    .profile-container {
+        margin-top: 100px;
+        margin-left: 100px;
+        font-family: 'Quicksand', 'Kosugi Maru', sans-serif;
+        font-size: 20px;
+    }
+   
+    .opportunity-record {
+        margin-top: 50px;
+        padding: 10px;
+        font-family: "Hiragino Kaku Gothic StdN";
+        font-size: 50px;
+        border: solid;
+        border-radius: 0.3em;	
+    }
+    .opportunity-record:hover {
+        color: #FEFFFF;
+        cursor : pointer;
+    }
+   
+    p {
+        margin: 10px;
+    }
+
+    h2 {
+        margin: 50px 0px 10px;
+    }
+
+    table {
+        margin: 10px;
+    }
+
+    td {
+        padding: 5px;
+    }
+}
+@media screen and ( max-width:479px )
+{
+    .image-container {
+        text-align: center;
+    }
+
+    // .container {
+    //     display: flex;
+    // }
+
+    img {
+        margin-top: 20px;
+        width:110px;
+    }
+
+    .name-text {
+        font-family: 'Kosugi Maru', sans-serif;
+    }
+
+    .profile-container {
+        margin-top: 20px;
+        font-family: 'Quicksand', 'Kosugi Maru', sans-serif;
+        font-size: 10px;
+        text-align: center;
+    }
+   
+    .opportunity-record {
+        margin: 20px 30px 0px;
+        padding: 10px;
+        font-family: "Hiragino Kaku Gothic StdN";
+        font-size: 15px;
+        border: solid;
+        border-radius: 0.3em;	
+    }
+
+    p {
+        margin: 10px;
+    }
+
+    h2 {
+        margin: 20px 0px 10px;
+    }
+
+    .table{
+        margin: 10px;
+        display: inline-block;
+    }
+
+    td {
+        padding: 5px;
+    }
+}
+/*プロフィール*/

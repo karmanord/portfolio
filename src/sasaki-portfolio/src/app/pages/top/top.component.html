@@ -1,9 +1,52 @@
 <div class="top-container">
-    <div class="title-container">
-        <div *ngIf="title1Flg" class="text">YUSUKE-SASAKI</div>
-        <div *ngIf="title2Flg" class="text">PORTFOLIO</div>
-        <div *ngIf="title3Flg" class="sub-text">~Application Engineer~</div>
-        <div *ngIf="title4Flg" class="text next">PROFILE→→→</div>
+    <!-- タイトル -->
+    <div *ngIf="topFlg" class="title-container">
+        <div *ngIf="title1Flg" [class.colorChange1]="colorChange1Flg" class="text">YUSUKE-SASAKI</div>
+        <div *ngIf="title2Flg" [class.colorChange2]="colorChange2Flg" class="text">PORTFOLIO</div>
+        <div *ngIf="title3Flg" [class.colorChange3]="colorChange3Flg" class="sub-text">~Application Engineer~</div>
+        <div *ngIf="title4Flg" class="text next" (click)="onClick()">PROFILE→→→</div>
     </div>
-    <!-- <div class="decoration"></div> -->
+    <!-- プロフィール -->
+    <div *ngIf="profileFlg" class="container">
+        <div class="image-container">
+            <img src="../../../assets/image/profile.png">
+            <p class="name-text">佐々木 祐輔</p>
+
+            <div class="opportunity-record">案件実績を見る</div>
+        </div>
+        <div class="profile-container">
+            <h1>Webアプリ・スマホアプリ開発者</h1>
+            <p>フロントエンドからバックエンドまで設計開発しています。</p>
+            <p>インフラ・DB周りも守備範囲です。</p>
+            <h2>主なスキル</h2>
+            <div class="table">
+                <table table-border="1">
+                    <tr>
+                        <td>Java</td>
+                        <td>.NET</td>
+                        <td>PHP</td>
+                        <td>MarkDown</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>TypeScript</td>
+                        <td>Angular</td>
+                        <td>NativeScript</td>
+                    </tr>
+                    <tr>
+                        <td>Linux</td>
+                        <td>Vagrant</td>
+                        <td>Docker</td>
+                        <td>SQL</td>
+                    </tr>
+                </table>
+            </div>
+            <p>案件に合わせて様々な言語・技術に対応致します。</p>
+
+            <h2>所有資格</h2>
+            <div>・基本情報技術者</div>
+            <div>・Oracle Master Bronze 12c</div>
+        </div>
+    </div>
 </div>
+
