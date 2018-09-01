@@ -1,26 +1,20 @@
-<div class="top-container">
+<div class="top-container" [class.opportunity-record-color]="opportunityRecordFlg">
     <!-- タイトル -->
     <div *ngIf="topFlg" class="title-container">
         <div *ngIf="title1Flg" [class.colorChange1]="colorChange1Flg" class="text">YUSUKE-SASAKI</div>
         <div *ngIf="title2Flg" [class.colorChange2]="colorChange2Flg" class="text">PORTFOLIO</div>
         <div *ngIf="title3Flg" [class.colorChange3]="colorChange3Flg" class="sub-text">~Application Engineer~</div>
-        <div *ngIf="title4Flg" class="text next" (click)="onClick()">PROFILE→→→</div>
+        <div *ngIf="title4Flg" class="text next" (click)="goToProfile()">PROFILE→→→</div>
     </div>
     <!-- プロフィール -->
     <div *ngIf="profileFlg" class="container">
-        <div class="image-container">
-            <img src="../../../assets/image/profile.png">
-            <p class="name-text">佐々木 祐輔</p>
-
-            <div class="opportunity-record">案件実績を見る</div>
-        </div>
-        <div class="profile-container">
-            <h1>Webアプリ・スマホアプリ開発者</h1>
-            <p>フロントエンドからバックエンドまで設計開発しています。</p>
-            <p>インフラ・DB周りも守備範囲です。</p>
-            <h2>主なスキル</h2>
+        <div class="profile-container item" >
+            <h1 class="start">Webアプリ・スマホアプリ開発者</h1>
+            <p class="p-margin">フロントエンドからバックエンドまで設計開発しています。</p>
+            <p class="p-margin">インフラ・DB周りも守備範囲です。</p>
+            <h2 class="h2-margin">主なスキル</h2>
             <div class="table">
-                <table table-border="1">
+                <table>
                     <tr>
                         <td>Java</td>
                         <td>.NET</td>
@@ -43,9 +37,41 @@
             </div>
             <p>案件に合わせて様々な言語・技術に対応致します。</p>
 
-            <h2>所有資格</h2>
+            <h2 class="h2-margin">所有資格</h2>
             <div>・基本情報技術者</div>
             <div>・Oracle Master Bronze 12c</div>
+        </div>
+        <div class="image-container item">
+            <img src="../../../assets/image/profile.png">
+            <p class="name-text p-margin">{{name}}</p>
+            <div class="small-text">y.sasaki.develop@gmail.com</div>
+
+            <div class="opportunity-record" (click)="goToRecord()">案件実績 <i class="fa fa-chevron-circle-right"></i></div>
+        </div>
+    </div>
+    <div *ngIf="opportunityRecordFlg" class="opportunity-record-container">
+        <div class="left-columns"></div>        
+        <div class="container">
+            <div class="canal-image item">
+                <img src="../../../assets/image/canal.png">
+            </div>
+            <div class="canal-description item">
+                <h2 class="h2-margin">CANAL</h2>
+                <p class="small-text">ソーシャル向けの名刺交換アプリ(iOS/Android)</p>
+                <br>
+                <p class="small-text">事前にSNSアカウントを名刺に登録し、近くにいるユーザ同士でリアルタイムの名刺交換を行ないます。</p>
+                <p class="small-text">交換成立後、相手名刺のSNSアイコンをタップすると、当該SNSのアプリを自動的に起動して、ユーザのトップページを表示する仕組みとなっています。</p>
+                <p class="small-text">LINEの『友だち追加』にも対応可能で、初対面のユーザが円滑に関係を築くことができるアプリです。</p>
+                <p class="small-text">フロントエンドはAngularとNativeScriptのプラグインを用いて実装しました。</p>
+                <p class="small-text">バックエンドのAPIはFuelPHPで実装し、名刺交換相手の検索、およびお互いに名刺交換が行なわれたかどうかを随時検知しています。</p>
+            </div>
+        </div>      
+        <hr class="float-clear">
+        <div class="canal-description other-description">
+            <p class="small-text">・電力事業種向け ~販売管理システム/WBS管理システム~<p>
+            <p class="small-text">・インターネットサービス事業種向け ~在庫管理システム~</p>
+            <p class="small-text">等、業務系アプリの開発も行なっています。</p>
+            <div class="opportunity-record profile-button" (click)="backToProfile()"><i class="fa fa-chevron-circle-left"></i>プロフィール</div>
         </div>
     </div>
 </div>

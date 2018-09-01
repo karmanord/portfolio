@@ -6,9 +6,11 @@ import * as anime from 'animejs';
   templateUrl: './top.component.html',
   styleUrls: ['./top.component.scss']
 })
+
 export class TopComponent implements AfterViewInit {
   topFlg = true;
   profileFlg = false;
+  opportunityRecordFlg = false;
 
   title1Flg = false;
   title2Flg = false;
@@ -23,8 +25,28 @@ export class TopComponent implements AfterViewInit {
   timer2;
   timer3;
 
+  name = '佐々木祐輔';
 
-  constructor() { }
+  birthday;
+  today;
+  years;
+
+  style = false;
+
+  constructor() {
+    // 年齢を計算する
+    this.birthday = new Date('9/12/1989');
+    this.today = new Date();
+    this.years = this.today.getFullYear() - this.birthday.getFullYear();
+
+    this.birthday.setFullYear(this.today.getFullYear());
+
+    if (this.today < this.birthday) {
+      this.years--;
+    }
+
+    this.name += '(' + this.years + '歳)';
+}
 
   ngAfterViewInit() {
        setTimeout(() => {
@@ -46,18 +68,29 @@ export class TopComponent implements AfterViewInit {
         }, 1000);
         this.timer2 = setInterval(() => {
           this.colorChange2Flg = !this.colorChange2Flg;
-        }, 1500);
+        }, 2000);
         this.timer3 = setInterval(() => {
           this.colorChange3Flg = !this.colorChange3Flg;
-        }, 2000);
+        }, 3000);
       }, 3000);
   }
 
-  onClick() {
+  goToProfile() {
     this.topFlg = false;
     this.profileFlg = true;
     clearInterval(this.timer1);
     clearInterval(this.timer2);
     clearInterval(this.timer3);
+    this.style = true;
+  }
+
+  goToRecord() {
+    this.profileFlg = false;
+    this.opportunityRecordFlg = true;
+  }
+
+  backToProfile() {
+    this.profileFlg = true;
+    this.opportunityRecordFlg = false;
   }
 }

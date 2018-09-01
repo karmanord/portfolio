@@ -1,8 +1,10 @@
 /*共通*/
 .top-container {
-    height: 100vh;
+    min-height:100vh !important;
+    min-width: 100vw !important;
     background-color: #ECC32E;   
     position: relative;
+    // border: 10px solid #FFF;
 }
 /*共通*/
 
@@ -29,7 +31,7 @@
 .sub-text {
     // font-family: 'Syncopate', sans-serif;
     font-family: 'Press Start 2P', cursive;
-    font-size: 10px;
+    font-size: 13px;
     margin-top: 40px;
     color: #FEFFFF;
 }
@@ -62,7 +64,7 @@
     }
 
     .sub-text {
-        font-size: 5px;
+        font-size: 10px;
     }
 
     .next {
@@ -72,9 +74,11 @@
 /*タイトル*/
 
 /*プロフィール*/
+  
 @media screen and ( min-width:480px )
 {
     .image-container {
+        font-family: 'Quicksand', 'Kosugi Maru', sans-serif;
         margin-top: 100px;
         margin-left: 100px;
         text-align: center;
@@ -102,7 +106,7 @@
     .opportunity-record {
         margin-top: 50px;
         padding: 10px;
-        font-family: "Hiragino Kaku Gothic StdN";
+        font-family: "Hiragino Kaku Gothic StdN", 'Quicksand', sans-serif;
         font-size: 50px;
         border: solid;
         border-radius: 0.3em;	
@@ -112,11 +116,11 @@
         cursor : pointer;
     }
    
-    p {
+    .p-margin {
         margin: 10px;
     }
 
-    h2 {
+    .h2-margin {
         margin: 50px 0px 10px;
     }
 
@@ -131,12 +135,17 @@
 @media screen and ( max-width:479px )
 {
     .image-container {
+        font-family: 'Quicksand', 'Kosugi Maru', sans-serif;
         text-align: center;
     }
 
     // .container {
     //     display: flex;
     // }
+
+    .start {
+        padding-top: 20px;
+    }
 
     img {
         margin-top: 20px;
@@ -148,7 +157,6 @@
     }
 
     .profile-container {
-        margin-top: 20px;
         font-family: 'Quicksand', 'Kosugi Maru', sans-serif;
         font-size: 10px;
         text-align: center;
@@ -157,22 +165,28 @@
     .opportunity-record {
         margin: 20px 30px 0px;
         padding: 10px;
-        font-family: "Hiragino Kaku Gothic StdN";
+        font-family: "Hiragino Kaku Gothic StdN", 'Quicksand', sans-serif;;
         font-size: 15px;
         border: solid;
         border-radius: 0.3em;	
     }
-
-    p {
-        margin: 10px;
+    
+    .opportunity-record:hover {
+        color: #FEFFFF;
+        cursor : pointer;
     }
 
-    h2 {
+    .p-margin {
+        margin: 10px;
+
+    }
+
+    .h2-margin {
         margin: 20px 0px 10px;
     }
 
     .table{
-        margin: 10px;
+        // margin: 0px;
         display: inline-block;
     }
 
@@ -181,3 +195,113 @@
     }
 }
 /*プロフィール*/
+
+/*案件実績*/
+.opportunity-record-container {
+    // position: absolute;
+    // width: 100%;
+    // height: 100%;
+    
+    padding: 20px;
+//     height: 400px;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     position: absolute;
+}
+.opportunity-record-color {
+    background-color: #292929;  
+}
+.canal-description {
+    font-family: 'Quicksand', 'Kosugi Maru', sans-serif;
+    color: #FEFFFF;
+    // width: 1000px;
+    // text-align: center
+}
+
+.left-columns {
+    width: 10%;
+    float: left;
+}
+
+.other-description{
+    text-align: center;
+}
+
+hr {
+    margin:10px 0px;
+}
+@media screen and ( min-width:480px )
+{
+   .canal-image {
+        // float: left;
+        margin: 30px;
+   }
+
+   .canal-description {
+        // float: left;
+        margin: 30px;
+        // margin-top: 30px;
+    }   
+
+    .small-text {
+        font-size: 15px;
+        margin: 5px 0px;
+    }
+
+   .float-clear {
+        clear: left;
+        // margin: 20px;
+    }
+    .profile-button{
+        text-align: center;
+        font-size: 20px;
+        margin: 30px auto;
+        max-width: 300px;
+    }
+    .profile-button:hover {
+        color: #ECC32E;
+        cursor : pointer;
+    }
+}
+
+@media screen and ( max-width:479px )
+{
+    .canal-image {
+        text-align: center;
+        // margin: 0px;
+    }
+    
+    .canal-description {
+        margin-top: 10px;
+    }
+
+    .small-text {
+        font-size: 10px;
+        margin: 5px 0px;
+    }
+    .float-clear {
+        clear: both;
+    }
+    .profile-button{
+        text-align: center;
+        margin: 20px auto;
+        font-size: 15px;
+        max-width: 300px;
+    }
+    .profile-button:hover {
+        color: #ECC32E;
+        cursor : pointer;
+    }
+
+    hr {
+        margin:2px 0px;
+    }
+}
+
+
+// div {
+//     border: solid 2px #292929;
+// }
+/*案件実績*/
